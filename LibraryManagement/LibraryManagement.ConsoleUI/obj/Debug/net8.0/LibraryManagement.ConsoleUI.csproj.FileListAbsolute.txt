@@ -1,0 +1,14 @@
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\bin\Debug\net8.0\LibraryManagement.ConsoleUI.exe
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\bin\Debug\net8.0\LibraryManagement.ConsoleUI.deps.json
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\bin\Debug\net8.0\LibraryManagement.ConsoleUI.runtimeconfig.json
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\bin\Debug\net8.0\LibraryManagement.ConsoleUI.dll
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\bin\Debug\net8.0\LibraryManagement.ConsoleUI.pdb
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\obj\Debug\net8.0\LibraryManagement.ConsoleUI.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\obj\Debug\net8.0\LibraryManagement.ConsoleUI.AssemblyInfoInputs.cache
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\obj\Debug\net8.0\LibraryManagement.ConsoleUI.AssemblyInfo.cs
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\obj\Debug\net8.0\LibraryManagement.ConsoleUI.csproj.CoreCompileInputs.cache
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\obj\Debug\net8.0\LibraryManagement.ConsoleUI.dll
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\obj\Debug\net8.0\refint\LibraryManagement.ConsoleUI.dll
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\obj\Debug\net8.0\LibraryManagement.ConsoleUI.pdb
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\obj\Debug\net8.0\LibraryManagement.ConsoleUI.genruntimeconfig.cache
+C:\Users\Pendik\source\repos\LibraryManagement\LibraryManagement.ConsoleUI\obj\Debug\net8.0\ref\LibraryManagement.ConsoleUI.dll
