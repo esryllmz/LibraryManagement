@@ -23,7 +23,7 @@
 //Kullanıcıdan ilk başta id değeri alıp arama yapınca eğer sistemde yoksa "İlgili id ye ait kitap bulunamadı " yazısını verecek
 //Güncellenecek olan değerler kullanıcıdan alınacaktır.
 //-----------------------------------------------------
-//Kullanıcıdan bir kitap almasını isteyen kodu yaınız.
+//Kullanıcıdan bir kitap almasını isteyen kodu yazınız.
 //Eğer o kitap stok da varsa alındı yazsın
 // 1 tane varsa o kitap alınsın ve 0 olursa listeden silinsin.
 //----------------------------------------------------
@@ -100,8 +100,13 @@ List<Category> categories = new List<Category>()
 
 BookService bookService = new BookService();
 //bookService.GetAll();
-bookService.GellById(1);
-
+//bookService.GellById(1);
+//bookService.GetAllBooksByPageSize(100, 150);
+//bookService.GetAllBooksTittleContains("K");
+//bookService.GetAllBooksOrderByTittle();
+//bookService.GetBookMinPageSize();
+//bookService.GetBookMaxPageSize();
+bookService.GetDetails();
 
 //LibraryController controller = new LibraryController();
 //controller.Run();
@@ -212,7 +217,7 @@ void Add(Book book)
         Console.WriteLine("Lütfen kitap ISBN numarasını giriniz: ");
         string isbn = Console.ReadLine();
 
-        Book book = new Book(id, title, description, pageSize, publishDate, isbn);
+        Book book = new Book(id,1, title, description, pageSize, publishDate, isbn);
         return book;
     }
     //bool AddBookValidator(Book book)
