@@ -106,7 +106,9 @@ BookService bookService = new BookService();
 //bookService.GetAllBooksOrderByTittle();
 //bookService.GetBookMinPageSize();
 //bookService.GetBookMaxPageSize();
-bookService.GetDetails();
+//bookService.GetDetails();
+//bookService.GetAllBookAndAuthorDetails();
+bookService.GetAllDetailsByCategorId(3);
 
 //LibraryController controller = new LibraryController();
 //controller.Run();
@@ -197,29 +199,29 @@ void Add(Book book)
     //        Console.WriteLine(item);
     //    }
     //}
-    Book GetBookInputs2()
-    {
-        Console.WriteLine("Lütfen kitap id sini giriniz: ");
-        int id = Convert.ToInt32(Console.ReadLine());
+    //Book GetBookInputs2()
+    //{
+    //    Console.WriteLine("Lütfen kitap id sini giriniz: ");
+    //    int id = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Lütfen kitap başlığını giriniz: ");
-        string title = Console.ReadLine();
+    //    Console.WriteLine("Lütfen kitap başlığını giriniz: ");
+    //    string title = Console.ReadLine();
 
-        Console.WriteLine("Lütfen kitap Açıklamasını giriniz: ");
-        string description = Console.ReadLine();
+    //    Console.WriteLine("Lütfen kitap Açıklamasını giriniz: ");
+    //    string description = Console.ReadLine();
 
-        Console.WriteLine("Lütfen kitap sayfasını giriniz: ");
-        int pageSize = Convert.ToInt32(Console.ReadLine());
+    //    Console.WriteLine("Lütfen kitap sayfasını giriniz: ");
+    //    int pageSize = Convert.ToInt32(Console.ReadLine());
 
-        Console.WriteLine("Lütfen kitap Yayımlanma Tarihini giriniz: ");
-        string publishDate = Console.ReadLine();
+    //    Console.WriteLine("Lütfen kitap Yayımlanma Tarihini giriniz: ");
+    //    string publishDate = Console.ReadLine();
 
-        Console.WriteLine("Lütfen kitap ISBN numarasını giriniz: ");
-        string isbn = Console.ReadLine();
+    //    Console.WriteLine("Lütfen kitap ISBN numarasını giriniz: ");
+    //    string isbn = Console.ReadLine();
 
-        Book book = new Book(id,1, title, description, pageSize, publishDate, isbn);
-        return book;
-    }
+    //    Book book = new Book(id, 1, 1, title, description, pageSize, publishDate, isbn);
+    //    return book;
+    //}
     //bool AddBookValidator(Book book)
     //{
     //    bool isUnique = true;
@@ -250,95 +252,95 @@ void Add(Book book)
     //    books.Add(book);
 
     //}
-    bool AddCategoryValidator(Category category)
-    {
-        bool isUnique = true;
+    //bool AddCategoryValidator(Category category)
+    //{
+    //    bool isUnique = true;
 
-        foreach (Category item in categories)
-        {
-            if (item.Id == category.Id || item.Name == category.Name)
-            {
-                isUnique = false;
-                break;
-            }
-        }
+    //    foreach (Category item in categories)
+    //    {
+    //        if (item.Id == category.Id || item.Name == category.Name)
+    //        {
+    //            isUnique = false;
+    //            break;
+    //        }
+    //    }
 
-        return isUnique;
-    }
-
-
-    Category GetCategoryInputs()
-    {
-        Console.WriteLine("Lütfen kategori id giriniz: ");
-        int id = Convert.ToInt32(Console.ReadLine());
-
-        Console.WriteLine("Lütfen kategori adı giriniz: ");
-        string name = Console.ReadLine();
+    //    return isUnique;
+    //}
 
 
-        Category category = new Category(id, name);
-        return category;
-    }
+    //Category GetCategoryInputs()
+    //{
+    //    Console.WriteLine("Lütfen kategori id giriniz: ");
+    //    int id = Convert.ToInt32(Console.ReadLine());
 
-    void AddAuthor()
-    {
-
-        Author author = GetAuthorInputs();
-
-        bool isUnique = AddAuthorValidator(author);
-
-        if (!isUnique)
-        {
-            Console.WriteLine("Girmiş olduğunuz Yazar Benzersiz değil.");
-            return;
-        }
-        authors.Add(author);
-
-        GetAllAuthors();
-
-    }
+    //    Console.WriteLine("Lütfen kategori adı giriniz: ");
+    //    string name = Console.ReadLine();
 
 
-    bool AddAuthorValidator(Author author)
-    {
-        bool isUnique = true;
+    //    Category category = new Category(id, name);
+    //    return category;
+    //}
 
-        foreach (Author item in authors)
-        {
-            if (item.Id == author.Id)
-            {
-                isUnique = false;
-                break;
-            }
-        }
+    //void AddAuthor()
+    //{
 
-        foreach (Author item in authors)
-        {
-            if (item.Name == author.Name && item.Surname == author.Surname)
-            {
-                isUnique = false;
-                break;
-            }
-        }
+    //    Author author = GetAuthorInputs();
 
-        return isUnique;
-    }
+    //    bool isUnique = AddAuthorValidator(author);
+
+    //    if (!isUnique)
+    //    {
+    //        Console.WriteLine("Girmiş olduğunuz Yazar Benzersiz değil.");
+    //        return;
+    //    }
+    //    authors.Add(author);
+
+    //    GetAllAuthors();
+
+    //}
 
 
-    Author GetAuthorInputs()
-    {
-        Console.WriteLine("Lütfen yazar id giriniz: ");
-        int id = Convert.ToInt32(Console.ReadLine());
+    //bool AddAuthorValidator(Author author)
+    //{
+    //    bool isUnique = true;
 
-        Console.WriteLine("Lütfen yazar adı giriniz: ");
-        string name = Console.ReadLine();
+    //    foreach (Author item in authors)
+    //    {
+    //        if (item.Id == author.Id)
+    //        {
+    //            isUnique = false;
+    //            break;
+    //        }
+    //    }
 
-        Console.WriteLine("Lütfen yazar soyadı giriniz: ");
-        string surnname = Console.ReadLine();
+    //    foreach (Author item in authors)
+    //    {
+    //        if (item.Name == author.Name && item.Surname == author.Surname)
+    //        {
+    //            isUnique = false;
+    //            break;
+    //        }
+    //    }
 
-        Author author = new Author(id, name, surnname);
-        return author;
-    }
+    //    return isUnique;
+    //}
+
+
+    //Author GetAuthorInputs()
+    //{
+    //    Console.WriteLine("Lütfen yazar id giriniz: ");
+    //    int id = Convert.ToInt32(Console.ReadLine());
+
+    //    Console.WriteLine("Lütfen yazar adı giriniz: ");
+    //    string name = Console.ReadLine();
+
+    //    Console.WriteLine("Lütfen yazar soyadı giriniz: ");
+    //    string surnname = Console.ReadLine();
+
+    //    Author author = new Author(id, name, surnname);
+    //    return author;
+    //}
 }
 
 

@@ -62,12 +62,29 @@ namespace LibraryManagement.ConsoleUI.Service
 
         public void Add(Book book)
         {
+            Book ? getByIdBook= bookRepository.GetById(book.Id);
+
+            if (getByIdBook!=null)
+            {
+                Console.WriteLine($"Girmiş olduğunuz kitabın Id alanı benzersiz olmalıdır: {book.Id}");
+                return;
+
+            }
+
+            Book ? getByIdISBN= bookRepository.GetBookByISBNFilter(book.ISBN);
+            if (getByIdISBN!=null)
+            {
+                Console.WriteLine($"Girmiş olduğunuz  ISBN alanı benzersiz olmalıdır: {book.ISBN}");
+            }
+
 
             Book created = bookRepository.Add(book);
             Console.WriteLine("Kitap Eklendi");
             Console.WriteLine(book);
 
         }
+
+        private
 
         //public Book GetAllBooksByPageSize(int min, int max)
         //{
@@ -147,12 +164,31 @@ namespace LibraryManagement.ConsoleUI.Service
 
         }
 
-        public void GetDetails()
-        {
-            List<BookDetailDto> books = bookRepository.GetDetails();
-            foreach (BookDetailDto bookDetail in books)
-            { Console.WriteLine(bookDetail); }
+        //public void GetDetails()
+        //{
+        //    List<BookDetailDto> books = bookRepository.GetDetails();
+        //    foreach (BookDetailDto bookDetail in books)
+        //    { Console.WriteLine(bookDetail); }
 
+        //}
+
+        //public void GetAllBookAndAuthorDetails()
+        //{
+        //    List<BookDetailDto> details = bookRepository.GetAuthorAndBookDetails();
+
+        //    details.ForEach(x => Console.WriteLine(x));
+
+
+        //}
+
+        public void GetAllDetailsByCategorId(int categorId)
+        {
+           List<BookDetailDto> details = bookRepository.GetAllDetailsByCategorId(categorId);
+
+           foreach (BookDetailDto detail in details)
+            {
+                Console.WriteLine(detail);
+            }
         }
     }
 }
